@@ -101,13 +101,3 @@ function updateTotal() {
 
 
 
-
-
-
-
-
-
-// if (!isContain(free)) {
-//     free.classList.add('selected');
-//     express.classList.remove('selected');
-// }
