@@ -1,8 +1,16 @@
-// Memory 
+// Memory Size
 const memory8 = document.getElementById('memory-8gb');
 const memory16 = document.getElementById('memory-16gb');
 const extraMemory = document.getElementById('memory-cost');
-
+// Update Total Price
+function updateTotal() {
+    const productPrice = parseFloat(originalPrice.innerText);
+    const memoryTotal = parseFloat(extraMemory.innerText);
+    const storageTotal = parseFloat(extraStorage.innerText);
+    const deliveryCharge = parseFloat(shippingCharge.innerText);
+    const grandTotal = productPrice + memoryTotal + storageTotal + deliveryCharge;
+    totalPrice.innerText = grandTotal;
+}
 //Button hover
 function isContain(elem) {
     return elem.classList.contains('selected');
@@ -88,16 +96,15 @@ expressShipping.addEventListener('click', function () {
 const totalPrice = document.getElementById('total-price');
 totalPrice.innerText = '1299';
 const originalPrice = document.getElementById('original-price');
-
-// Update Total Price
-function updateTotal() {
-    const productPrice = parseFloat(originalPrice.innerText);
-    const memoryTotal = parseFloat(extraMemory.innerText);
-    const storageTotal = parseFloat(extraStorage.innerText);
-    const deliveryCharge = parseFloat(shippingCharge.innerText);
-    const grandTotal = productPrice + memoryTotal + storageTotal + deliveryCharge;
-    totalPrice.innerText = grandTotal;
-}
-
-
-
+//Discount Coupon
+let footerPrice = document.getElementById('footer-price');
+const couponbtn = document.getElementById('coupon-button');
+couponbtn.addEventListener('click', function () {
+    let couponCode = document.getElementById('coupon').value;
+    if (couponCode == 'stevekaku') {
+        footerPrice.innerText = totalPrice.innerText - (totalPrice.innerText * 0.20);
+    }
+    else {
+        alert('This Promo Code Is Not A Valid Code');
+    }
+})

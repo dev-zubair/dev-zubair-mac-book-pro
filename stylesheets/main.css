@@ -3,7 +3,7 @@
     }
 
     .selected {
-        border: 3px solid grey;
+        border: 2px solid grey;
         background-color: #1F2937;
         color: white;
         font-weight: 700;
