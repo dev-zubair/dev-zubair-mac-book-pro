@@ -2,7 +2,7 @@
 const memory8 = document.getElementById('memory-8gb');
 const memory16 = document.getElementById('memory-16gb');
 const extraMemory = document.getElementById('memory-cost');
-// Update Total Price
+// Update Total Price Function
 function updateTotal() {
     const productPrice = parseFloat(originalPrice.innerText);
     const memoryTotal = parseFloat(extraMemory.innerText);
@@ -10,8 +10,9 @@ function updateTotal() {
     const deliveryCharge = parseFloat(shippingCharge.innerText);
     const grandTotal = productPrice + memoryTotal + storageTotal + deliveryCharge;
     totalPrice.innerText = grandTotal;
+    footerPrice.innerText = grandTotal;
 }
-//Button hover
+//Button hover function
 function isContain(elem) {
     return elem.classList.contains('selected');
 }
