@@ -14,6 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap" rel="stylesheet">
     <!-- Custom styling -->
     <link rel="stylesheet" href="style/main.css">
+    <!-- Favicon  -->
+    <link rel="shortcut icon" href="images/apple_logo-512.png" type="image/x-icon">
     <title>iMac 24</title>
 </head>
 
@@ -41,25 +43,32 @@
                     <!-- update product requirement -->
                     <div>
                         <h3 class="text-2xl mt-5 font-normal">Memory</h3>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">8GB
+                        <button id="memory-8gb"
+                            class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">8GB
                             unified memory</button>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected mb-5">16GB
+                        <button id="memory-16gb"
+                            class="p-2 border border-gray-500 shadow hover:shadow-lg rounded mb-5">16GB
                             unified memory</button>
                     </div>
                     <div>
                         <h3 class="text-2xl mt-5 font-normal">Storage</h3>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">256GB SSD
+                        <button id="storage-256"
+                            class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">256GB SSD
                             storage</button>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">512GB SSD
+                        <button id="storage-512" class="p-2 border border-gray-500 shadow hover:shadow-lg rounded">512GB
+                            SSD
                             storage</button>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected mb-5">1TB SSD
+                        <button id="storage-1tb"
+                            class="p-2 border border-gray-500 shadow hover:shadow-lg rounded mb-5">1TB SSD
                             storage</button>
                     </div>
                     <div>
                         <h3 class="text-2xl mt-5 font-normal">Choose Your Delivery Options</h3>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">Friday, Aug
+                        <button id="free-shipping"
+                            class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected">Friday, Aug
                             25 FREE Prime Delivery</button>
-                        <button class="p-2 border border-gray-500 shadow hover:shadow-lg rounded selected mb-5">Friday,
+                        <button id="express-shipping"
+                            class="p-2 border border-gray-500 shadow hover:shadow-lg rounded mb-5">Friday,
                             Aug 21 Delivery charge $20</button>
                     </div>
 
@@ -68,23 +77,23 @@
                         <tbody>
                             <tr class="font-semibold">
                                 <td>Best Price</td>
-                                <td class="text-right">$1299</td>
+                                <td class="text-right">$<span id="original-price">1299</span></td>
                             </tr>
                             <tr class="font-semibold">
                                 <td>Extra Memory Cost</td>
-                                <td class="text-right">$0</td>
+                                <td class="text-right">$<span id="memory-cost">0</span></td>
                             </tr>
                             <tr class="font-semibold">
                                 <td>Extra Storage Cost</td>
-                                <td class="text-right">$0</td>
+                                <td class="text-right">$<span id="extra-storage">0</span></td>
                             </tr>
                             <tr class="font-semibold border-b-2 border-gray-700">
                                 <td>Delivery Charge</td>
-                                <td class="text-right">$0</td>
+                                <td class="text-right">$<span id="shipping-charge">0</span></td>
                             </tr>
                             <tr class="font-semibold">
                                 <td>Total Price</td>
-                                <td class="text-right">$0</td>
+                                <td class="text-right">$<span id="total-price">0</span></td>
                             </tr>
 
                         </tbody>
@@ -116,7 +125,8 @@
             </div>
         </div>
         <div>
-            <h1 class="text-5xl pt-5 m-10 border-t-2 font-semibold text-center">Total: $1299</h1>
+            <h1 class="text-5xl pt-5 m-10 border-t-2 font-semibold text-center">Total: $<span
+                    id="footer-price">1299</span></h1>
         </div>
     </main>
     <!-- Custom js -->
